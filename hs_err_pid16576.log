@@ -1,0 +1,216 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ff8167ca87e, pid=16576, tid=18388
+#
+# JRE version:  (11.0+28) (build )
+# Java VM: OpenJDK 64-Bit Server VM (11+28, mixed mode, tiered, compressed oops, g1 gc, windows-amd64)
+# Problematic frame:
+# V  [jvm.dll+0x71a87e]
+#
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dfile.encoding=utf8 c:\Users\2155446\.vscode\extensions\vscjava.vscode-gradle-3.12.5\lib\gradle-language-server.jar
+
+Host: AMD Ryzen 5 5600U with Radeon Graphics         , 12 cores, 7G,  Windows 10 , 64 bit Build 19041 (10.0.19041.2251)
+Time: Fri Nov 18 08:25:33 2022 India Standard Time elapsed time: 0 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000001f0bbb64000):  JavaThread "Unknown thread" [_thread_in_vm, id=18388, stack(0x0000006506900000,0x0000006506a00000)]
+
+Stack: [0x0000006506900000,0x0000006506a00000],  sp=0x00000065069ff200,  free space=1020k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x71a87e]
+V  [jvm.dll+0x719b70]
+V  [jvm.dll+0x718e80]
+V  [jvm.dll+0x718add]
+V  [jvm.dll+0x3867e9]
+V  [jvm.dll+0x3740ad]
+V  [jvm.dll+0x738059]
+V  [jvm.dll+0x3e35fd]
+V  [jvm.dll+0x3e5961]
+C  [java.exe+0x3603]
+C  [java.exe+0x1746c]
+C  [KERNEL32.DLL+0x174b4]
+C  [ntdll.dll+0x526a1]
+
+
+siginfo: EXCEPTION_ACCESS_VIOLATION (0xc0000005), reading address 0x000001f07f67440c
+
+
+Registers:
+RAX=0x00000065069ff430, RBX=0x000000000000000c, RCX=0x000001f0bbb645a0, RDX=0x00000065069ff3d8
+RSP=0x00000065069ff200, RBP=0x00000065069ff2b9, RSI=0x000001f0c3eec55d, RDI=0x00000065069ff670
+R8 =0x000001f0bbb64000, R9 =0x00000065069ff2d0, R10=0x00007ff8169972e0, R11=0x000001f0ba1bd140
+R12=0x000001f0c3eec305, R13=0x0000000000000001, R14=0x000001f0c3eec495, R15=0x000001f0c3eec3cd
+RIP=0x00007ff8167ca87e, EFLAGS=0x0000000000010202
+
+Top of Stack: (sp=0x00000065069ff200)
+0x00000065069ff200:   0000000000000000 00007ff8167a6bca
+0x00000065069ff210:   000001f0c3eec3cd 000001f0c3eec495
+0x00000065069ff220:   00000065069ff670 00007ff8167d0a74
+0x00000065069ff230:   00000065069ff670 00007ff816860400
+0x00000065069ff240:   0000000000000000 0000000000000017
+0x00000065069ff250:   0000000000000000 0000000000000000
+0x00000065069ff260:   0000000000000004 ffffffffffffffff
+0x00000065069ff270:   ffffffffffffffff 00000028ffffffff
+0x00000065069ff280:   000001f0c3eec300 00007ff816860400
+0x00000065069ff290:   0000000000000000 00007ff8167a6bca
+0x00000065069ff2a0:   000001f0c3eec3cd 000001f0c3eec495
+0x00000065069ff2b0:   00000065069ff3a0 00000065069ff3d8
+0x00000065069ff2c0:   000000000003c3c0 00007ff816436677
+0x00000065069ff2d0:   000001f0c3eeeb60 000001f0bbb645a0
+0x00000065069ff2e0:   000000000003c3c0 00000000ffffffff
+0x00000065069ff2f0:   000001f0c3eec3cd 000034bb72126629 
+
+Instructions: (pc=0x00007ff8167ca87e)
+0x00007ff8167ca85e:   00 00 48 8b 05 69 16 32 00 48 33 c4 48 89 45 3f
+0x00007ff8167ca86e:   8b 1d a0 41 35 00 48 8b f9 48 8b 09 48 8b 41 08
+0x00007ff8167ca87e:   48 8b a1 6c fe b0 c3 05 11 f8 7e 35 31 27 eb d5
+0x00007ff8167ca88e:   aa 0f bb fb bc 22 3f 6c bc f6 4b fd 24 4c e3 82 
+
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x000001f0ba1bd5d0, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x000001f0bbb7c000 GCTaskThread "GC Thread#0" [stack: 0x0000006506a00000,0x0000006506b00000] [id=8312]
+  0x000001f0bbbad000 ConcurrentGCThread "G1 Main Marker" [stack: 0x0000006506b00000,0x0000006506c00000] [id=10292]
+  0x000001f0bbbaf800 ConcurrentGCThread "G1 Conc#0" [stack: 0x0000006506c00000,0x0000006506d00000] [id=8620]
+  0x000001f0bbc49800 ConcurrentGCThread "G1 Refine#0" [stack: 0x0000006506d00000,0x0000006506e00000] [id=20316]
+  0x000001f0bbc4a800 ConcurrentGCThread "G1 Young RemSet Sampling" [stack: 0x0000006506e00000,0x0000006506f00000] [id=17336]
+
+=>0x000001f0bbb64000 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=18388, stack(0x0000006506900000,0x0000006506a00000)]
+
+Threads with active compile tasks:
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap address: 0x0000000086e00000, size: 1938 MB, Compressed Oops mode: 32-bit
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 3
+Compressed class space size: 1073741824 Address: 0x0000000100000000
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff61f9f0000 - 0x00007ff61fa35000 	C:\Temp\openjdk 11\jdk-11\bin\java.exe
+0x00007ff8a2430000 - 0x00007ff8a2628000 	C:\windows\SYSTEM32\ntdll.dll
+0x00007ff8a2200000 - 0x00007ff8a22bf000 	C:\windows\System32\KERNEL32.DLL
+0x00007ff89fe20000 - 0x00007ff8a00f2000 	C:\windows\System32\KERNELBASE.dll
+0x00007ff8a0dc0000 - 0x00007ff8a0f5d000 	C:\windows\System32\USER32.dll
+0x00007ff89fc90000 - 0x00007ff89fcb2000 	C:\windows\System32\win32u.dll
+0x00007ff8a1900000 - 0x00007ff8a192b000 	C:\windows\System32\GDI32.dll
+0x00007ff8a0100000 - 0x00007ff8a020f000 	C:\windows\System32\gdi32full.dll
+0x00007ff89fb30000 - 0x00007ff89fbcd000 	C:\windows\System32\msvcp_win.dll
+0x00007ff8a0330000 - 0x00007ff8a0430000 	C:\windows\System32\ucrtbase.dll
+0x00007ff89dfe0000 - 0x00007ff89e27a000 	C:\windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e\COMCTL32.dll
+0x00007ff8a1f70000 - 0x00007ff8a200e000 	C:\windows\System32\msvcrt.dll
+0x00007ff8a2010000 - 0x00007ff8a2042000 	C:\windows\System32\IMM32.DLL
+0x000001f0bbb30000 - 0x000001f0bbb44000 	C:\windows\System32\umppc16103.dll
+0x00007ff886600000 - 0x00007ff886616000 	C:\Temp\openjdk 11\jdk-11\bin\vcruntime140.dll
+0x00007ff8173a0000 - 0x00007ff81744a000 	C:\Temp\openjdk 11\jdk-11\bin\msvcp140.dll
+0x00007ff8160b0000 - 0x00007ff816bf1000 	C:\Temp\openjdk 11\jdk-11\bin\server\jvm.dll
+0x00007ff8a0950000 - 0x00007ff8a09fe000 	C:\windows\System32\ADVAPI32.dll
+0x00007ff8a0a00000 - 0x00007ff8a0a9c000 	C:\windows\System32\sechost.dll
+0x00007ff8a22c0000 - 0x00007ff8a23e5000 	C:\windows\System32\RPCRT4.dll
+0x00007ff8a0ff0000 - 0x00007ff8a0ff8000 	C:\windows\System32\PSAPI.DLL
+0x00007ff8967a0000 - 0x00007ff8967a9000 	C:\windows\SYSTEM32\WSOCK32.dll
+0x00007ff8a1990000 - 0x00007ff8a19fb000 	C:\windows\System32\WS2_32.dll
+0x00007ff895bf0000 - 0x00007ff895c17000 	C:\windows\SYSTEM32\WINMM.dll
+0x00007ff895c20000 - 0x00007ff895c2a000 	C:\windows\SYSTEM32\VERSION.dll
+0x00007ff89dad0000 - 0x00007ff89dae2000 	C:\windows\SYSTEM32\kernel.appcore.dll
+0x00007ff87d140000 - 0x00007ff87d151000 	C:\Temp\openjdk 11\jdk-11\bin\verify.dll
+0x00007ff89d840000 - 0x00007ff89da24000 	C:\windows\SYSTEM32\DBGHELP.DLL
+0x00007ff8835a0000 - 0x00007ff8835cc000 	C:\windows\SYSTEM32\dbgcore.DLL
+0x00007ff89fbd0000 - 0x00007ff89fc52000 	C:\windows\System32\bcryptPrimitives.dll
+0x00007ff875d00000 - 0x00007ff875d28000 	C:\Temp\openjdk 11\jdk-11\bin\java.dll
+0x00007ff871f90000 - 0x00007ff871fa6000 	C:\Temp\openjdk 11\jdk-11\bin\zip.dll
+0x00007ff888310000 - 0x00007ff88831a000 	C:\Temp\openjdk 11\jdk-11\bin\jimage.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Temp\openjdk 11\jdk-11\bin;C:\windows\SYSTEM32;C:\windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e;C:\Temp\openjdk 11\jdk-11\bin\server
+
+VM Arguments:
+jvm_args: -Dfile.encoding=utf8 
+java_command: c:\Users\2155446\.vscode\extensions\vscjava.vscode-gradle-3.12.5\lib\gradle-language-server.jar
+java_class_path (initial): c:\Users\2155446\.vscode\extensions\vscjava.vscode-gradle-3.12.5\lib\gradle-language-server.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 3                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 10                                        {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 127926272                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 2032140288                                {product} {ergonomic}
+   size_t MaxNewSize                               = 1218445312                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5835340                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122911450                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122911450                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=C:\Temp\openjdk 11\jdk-11
+PATH=C:\Program Files (x86)\RSA SecurID Token Common;C:\Program Files\RSA SecurID Token Common;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files\nodejs\;C:\Temp\openjdk 11\jdk-11\bin;C:\Users\2155446\AppData\Local\Microsoft\WindowsApps;C:\Users\2155446\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\2155446\AppData\Local\Programs\Git\cmd
+USERNAME=2155446
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10 , 64 bit Build 19041 (10.0.19041.2251)
+
+CPU:total 12 (initial active 12) (12 cores per cpu, 2 threads per core) family 25 model 80 stepping 0, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, mmxext, 3dnowpref, lzcnt, sse4a, ht, tsc, tscinvbit, tscinv, bmi1, bmi2, adx, sha, fma
+
+Memory: 4k page, system-wide physical 7745M (1487M free)
+TotalPageFile size 19521M (AvailPageFile size 11836M)
+current process WorkingSet (physical memory assigned to process): 16M, peak: 16M
+current process commit charge ("private bytes"): 192M, peak: 192M
+
+vm_info: OpenJDK 64-Bit Server VM (11+28) for windows-amd64 JRE (11+28), built on Aug 23 2018 03:04:58 by "mach5one" with MS VC++ 15.5 (VS2017)
+
+END.
